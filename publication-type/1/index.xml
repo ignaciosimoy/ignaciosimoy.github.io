@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>1 | Mario Ignacio Simoy</title>
+    <link>https://ignaciosimoy.github.io/publication-type/1/</link>
+      <atom:link href="https://ignaciosimoy.github.io/publication-type/1/index.xml" rel="self" type="application/rss+xml" />
+    <description>1</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Tue, 25 May 2021 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://ignaciosimoy.github.io/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png</url>
+      <title>1</title>
+      <link>https://ignaciosimoy.github.io/publication-type/1/</link>
+    </image>
+    
+    <item>
+      <title>Modelo con estructura social para el estudio de medidas de control de la pandemia de COVID-19</title>
+      <link>https://ignaciosimoy.github.io/publication/maci2021/</link>
+      <pubDate>Tue, 25 May 2021 00:00:00 +0000</pubDate>
+      <guid>https://ignaciosimoy.github.io/publication/maci2021/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Modelo poblacional de ganado estructurado en edades y sexo</title>
+      <link>https://ignaciosimoy.github.io/publication/solabima2019b/</link>
+      <pubDate>Tue, 01 Oct 2019 00:00:00 +0000</pubDate>
+      <guid>https://ignaciosimoy.github.io/publication/solabima2019b/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Population and Individual Based Ross-Macdonald Models: Which one we should use?</title>
+      <link>https://ignaciosimoy.github.io/publication/solabima2019a/</link>
+      <pubDate>Tue, 01 Oct 2019 00:00:00 +0000</pubDate>
+      <guid>https://ignaciosimoy.github.io/publication/solabima2019a/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Modelo matemático para analizar la dinámica poblacional del guanaco (Lama Guanicoe) en un establecimiento agropecuario en la provincia de Neuquén</title>
+      <link>https://ignaciosimoy.github.io/publication/jornadasambientes2012/</link>
+      <pubDate>Mon, 01 Oct 2012 00:00:00 +0000</pubDate>
+      <guid>https://ignaciosimoy.github.io/publication/jornadasambientes2012/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

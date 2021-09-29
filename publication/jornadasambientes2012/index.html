@@ -1,0 +1,1299 @@
+<!DOCTYPE html><html lang="en-us" >
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  
+  
+  
+    <meta name="generator" content="Wowchemy 5.3.0 for Hugo" />
+  
+
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Mario Ignacio Simoy" />
+
+  
+  
+  
+    
+  
+  <meta name="description" content="El guanaco (Lama guanicoe) es el ungulado silvestre de mayor rango de distribución de Sud América, encontrándose principalmente en la zona patagónica argentina. Sin embargo, desde la llegada del hombre blanco ha visto reducir sus poblaciones significativamente. Como dicho animal posee una fibra de alto valor comercial, desde diversos organismos e instituciones se propone la esquila y liberación de individuos silvestres como estrategia para promover su conservación. Para proyectar la sustentabilidad de la explotación de una población silvestre bajo manejo, habrá que estimar el tamaño de la misma y modelar su evolución.
+
+El presente trabajo trata sobre la elaboración de un modelo matemático para simular la dinámica de una población de guanacos en la provincia de Neuquén. El resultado será el desarrollo de una herramienta que permita la utilización bien planificada del guanaco como recurso renovable, para justificar económicamente su conservación frente a la competencia de la producción bovina/ovina tradicional.
+
+El modelo poblacional está estructurado en 4 clases de edades: Chulengos, Juveniles, Adultos Jóvenes y Adultos Mayores y se lo ha parametrizado con datos de tasas vitales de esta especie obtenidos de la bibliografía científica. Se lo ha validado con datos poblacionales de establecimientos patagónicos y se han realizado los correspondientes análisis de sensibilidad y elasticidad para determinar cuales parámetros son los más importantes a cuidar para una explotación sustentable del recurso.
+
+El cálculo de la tasa de crecimiento poblacional, a partir de las tasas de fecundidad y de supervivencia en este caso de estudio, da como resultado una población en crecimiento. Esto permite la inclusión en el modelo de la opción de cosecha de algunos individuos atendiendo a la conservación. Este se utiliza también para analizar los efectos en la población de la extracción de Chulengos." />
+
+  
+  <link rel="alternate" hreflang="en-us" href="https://ignaciosimoy.github.io/publication/jornadasambientes2012/" />
+
+  
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  
+
+  
+  
+  
+    <meta name="theme-color" content="#1565c0" />
+  
+
+  
+  
+
+  
+
+  <link rel="stylesheet" href="/css/vendor-bundle.min.f1ecf783c14edc00c9320c205831ad8e.css" media="print" onload="this.media='all'">
+
+  
+  
+  
+    
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.0/css/academicons.min.css" integrity="sha512-W4yqoT1+8NLkinBLBZko+dFB2ZbHsYLDdr50VElllRcNt2Q4/GSs6u71UHKxB7S6JEMCp5Ve4xjh3eGQl/HRvg==" crossorigin="anonymous" media="print" onload="this.media='all'">
+    
+
+    
+    
+    
+    
+      
+      
+    
+    
+    
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/github.min.css" crossorigin="anonymous" title="hl-light" media="print" onload="this.media='all'">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" media="print" onload="this.media='all'" disabled>
+        
+      
+    
+
+    
+    
+    
+
+    
+
+    
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+        
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+  
+
+  
+  
+  
+    
+      
+      <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap" media="print" onload="this.media='all'">
+    
+  
+
+  
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/wowchemy.481af39c39ffd87b2d14f39943e7c723.css" />
+
+  
+
+
+
+  
+
+  
+
+  
+
+
+
+
+  
+  
+  
+
+  
+
+  
+    <link rel="manifest" href="/manifest.webmanifest" />
+  
+
+  <link rel="icon" type="image/png" href="/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_32x32_fill_lanczos_center_3.png" />
+  <link rel="apple-touch-icon" type="image/png" href="/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_180x180_fill_lanczos_center_3.png" />
+
+  <link rel="canonical" href="https://ignaciosimoy.github.io/publication/jornadasambientes2012/" />
+
+  
+  
+  
+  
+  
+  
+  
+  
+    
+    
+  
+  
+  <meta property="twitter:card" content="summary" />
+  
+  <meta property="og:site_name" content="Mario Ignacio Simoy" />
+  <meta property="og:url" content="https://ignaciosimoy.github.io/publication/jornadasambientes2012/" />
+  <meta property="og:title" content="Modelo matemático para analizar la dinámica poblacional del guanaco (Lama Guanicoe) en un establecimiento agropecuario en la provincia de Neuquén | Mario Ignacio Simoy" />
+  <meta property="og:description" content="El guanaco (Lama guanicoe) es el ungulado silvestre de mayor rango de distribución de Sud América, encontrándose principalmente en la zona patagónica argentina. Sin embargo, desde la llegada del hombre blanco ha visto reducir sus poblaciones significativamente. Como dicho animal posee una fibra de alto valor comercial, desde diversos organismos e instituciones se propone la esquila y liberación de individuos silvestres como estrategia para promover su conservación. Para proyectar la sustentabilidad de la explotación de una población silvestre bajo manejo, habrá que estimar el tamaño de la misma y modelar su evolución.
+
+El presente trabajo trata sobre la elaboración de un modelo matemático para simular la dinámica de una población de guanacos en la provincia de Neuquén. El resultado será el desarrollo de una herramienta que permita la utilización bien planificada del guanaco como recurso renovable, para justificar económicamente su conservación frente a la competencia de la producción bovina/ovina tradicional.
+
+El modelo poblacional está estructurado en 4 clases de edades: Chulengos, Juveniles, Adultos Jóvenes y Adultos Mayores y se lo ha parametrizado con datos de tasas vitales de esta especie obtenidos de la bibliografía científica. Se lo ha validado con datos poblacionales de establecimientos patagónicos y se han realizado los correspondientes análisis de sensibilidad y elasticidad para determinar cuales parámetros son los más importantes a cuidar para una explotación sustentable del recurso.
+
+El cálculo de la tasa de crecimiento poblacional, a partir de las tasas de fecundidad y de supervivencia en este caso de estudio, da como resultado una población en crecimiento. Esto permite la inclusión en el modelo de la opción de cosecha de algunos individuos atendiendo a la conservación. Este se utiliza también para analizar los efectos en la población de la extracción de Chulengos." /><meta property="og:image" content="https://ignaciosimoy.github.io/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png" />
+    <meta property="twitter:image" content="https://ignaciosimoy.github.io/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="en-us" />
+  
+    
+      <meta
+        property="article:published_time"
+        content="2012-10-01T00:00:00&#43;00:00"
+      />
+    
+    <meta property="article:modified_time" content="2012-10-01T00:00:00&#43;00:00">
+  
+
+  
+
+
+    
+
+
+
+
+
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://ignaciosimoy.github.io/publication/jornadasambientes2012/"
+  },
+  "headline": "Modelo matemático para analizar la dinámica poblacional del guanaco (Lama Guanicoe) en un establecimiento agropecuario en la provincia de Neuquén",
+  
+  "datePublished": "2012-10-01T00:00:00Z",
+  "dateModified": "2012-10-01T00:00:00Z",
+  
+  "author": {
+    "@type": "Person",
+    "name": "Mauro Andrés Nardín"
+  },
+  
+  "publisher": {
+    "@type": "Organization",
+    "name": "Mario Ignacio Simoy",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://ignaciosimoy.github.io/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_192x192_fill_lanczos_center_3.png"
+    }
+  },
+  "description": "El guanaco (Lama guanicoe) es el ungulado silvestre de mayor rango de distribución de Sud América, encontrándose principalmente en la zona patagónica argentina. Sin embargo, desde la llegada del hombre blanco ha visto reducir sus poblaciones significativamente. Como dicho animal posee una fibra de alto valor comercial, desde diversos organismos e instituciones se propone la esquila y liberación de individuos silvestres como estrategia para promover su conservación. Para proyectar la sustentabilidad de la explotación de una población silvestre bajo manejo, habrá que estimar el tamaño de la misma y modelar su evolución.\n\nEl presente trabajo trata sobre la elaboración de un modelo matemático para simular la dinámica de una población de guanacos en la provincia de Neuquén. El resultado será el desarrollo de una herramienta que permita la utilización bien planificada del guanaco como recurso renovable, para justificar económicamente su conservación frente a la competencia de la producción bovina/ovina tradicional.\n\nEl modelo poblacional está estructurado en 4 clases de edades: Chulengos, Juveniles, Adultos Jóvenes y Adultos Mayores y se lo ha parametrizado con datos de tasas vitales de esta especie obtenidos de la bibliografía científica. Se lo ha validado con datos poblacionales de establecimientos patagónicos y se han realizado los correspondientes análisis de sensibilidad y elasticidad para determinar cuales parámetros son los más importantes a cuidar para una explotación sustentable del recurso.\n\nEl cálculo de la tasa de crecimiento poblacional, a partir de las tasas de fecundidad y de supervivencia en este caso de estudio, da como resultado una población en crecimiento. Esto permite la inclusión en el modelo de la opción de cosecha de algunos individuos atendiendo a la conservación. Este se utiliza también para analizar los efectos en la población de la extracción de Chulengos."
+}
+</script>
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+  <title>Modelo matemático para analizar la dinámica poblacional del guanaco (Lama Guanicoe) en un establecimiento agropecuario en la provincia de Neuquén | Mario Ignacio Simoy</title>
+</head>
+
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="0c791d13836e5bc73e5a623446271226" >
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <script src="/js/wowchemy-init.min.8988fb2a4bba758785868cfcb5244555.js"></script>
+
+  
+
+
+<aside class="search-modal" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#" aria-label="Close"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search" class="form-control"
+        aria-label="Search...">
+        
+      </div>
+
+      
+      
+
+      
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+
+  <div class="page-header">
+    
+
+
+
+
+
+
+
+
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+  <div class="container-xl">
+
+    
+    <div class="d-none d-lg-inline-flex">
+      <a class="navbar-brand" href="/">Mario Ignacio Simoy</a>
+    </div>
+    
+
+    
+    <button type="button" class="navbar-toggler" data-toggle="collapse"
+            data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+    <span><i class="fas fa-bars"></i></span>
+    </button>
+    
+
+    
+    <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+      <a class="navbar-brand" href="/">Mario Ignacio Simoy</a>
+    </div>
+    
+
+    
+    
+    <div class="navbar-collapse main-menu-item collapse justify-content-center" id="navbar-content">
+
+      
+      <ul class="navbar-nav d-md-inline-flex">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#about"><span>Home</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#featured"><span>Publications</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#experience"><span>Experience</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#supervision"><span>Supervision</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#teaching"><span>Teaching</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#contact"><span>Contact</span></a>
+        </li>
+
+        
+        
+
+      
+
+        
+      </ul>
+    </div>
+
+    <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+
+      
+      
+        
+      
+
+      
+      
+      <li class="nav-item">
+        <a class="nav-link js-search" href="#" aria-label="Search"><i class="fas fa-search" aria-hidden="true"></i></a>
+      </li>
+      
+
+      
+      
+      <li class="nav-item dropdown theme-dropdown">
+        <a href="#" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-label="Display preferences">
+          <i class="fas fa-moon" aria-hidden="true"></i>
+        </a>
+        <div class="dropdown-menu">
+          <a href="#" class="dropdown-item js-set-theme-light">
+            <span>Light</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-dark">
+            <span>Dark</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-auto">
+            <span>Automatic</span>
+          </a>
+        </div>
+      </li>
+      
+
+      
+      
+
+    </ul>
+
+  </div>
+</nav>
+
+
+  </div>
+
+  <div class="page-body">
+    
+
+
+
+
+
+
+
+
+<div class="pub">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+<div class="article-container pt-3">
+  <h1>Modelo matemático para analizar la dinámica poblacional del guanaco (Lama Guanicoe) en un establecimiento agropecuario en la provincia de Neuquén</h1>
+
+  
+
+  
+    
+
+
+<div class="article-metadata">
+
+  
+  
+  
+  
+  <div>
+    
+
+  <span >
+      Mauro Andrés Nardín</span>, <span class="author-highlighted">
+      Mario Ignacio Simoy</span>
+  </div>
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    October 2012
+  </span>
+  
+
+  
+
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+  
+
+</div>
+
+    
+
+
+
+
+<div class="btn-links mb-3">
+  
+  
+
+
+
+
+
+
+
+
+  
+
+
+
+<a class="btn btn-outline-primary btn-page-header" href="/publication/jornadasambientes2012/JORNADASAMBIENTES2012.pdf" target="_blank" rel="noopener">
+  PDF
+</a>
+
+
+
+<a href="#" class="btn btn-outline-primary btn-page-header js-cite-modal"
+        data-filename="/publication/jornadasambientes2012/cite.bib">
+  Cite
+</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+  
+</div>
+
+
+
+  <div class="article-container">
+
+    
+    <h3>Abstract</h3>
+    <p class="pub-abstract"><p>El guanaco (Lama guanicoe) es el ungulado silvestre de mayor rango de distribución de Sud América, encontrándose principalmente en la zona patagónica argentina. Sin embargo, desde la llegada del hombre blanco ha visto reducir sus poblaciones significativamente. Como dicho animal posee una fibra de alto valor comercial, desde diversos organismos e instituciones se propone la esquila y liberación de individuos silvestres como estrategia para promover su conservación. Para proyectar la sustentabilidad de la explotación de una población silvestre bajo manejo, habrá que estimar el tamaño de la misma y modelar su evolución.</p>
+<p>El presente trabajo trata sobre la elaboración de un modelo matemático para simular la dinámica de una población de guanacos en la provincia de Neuquén. El resultado será el desarrollo de una herramienta que permita la utilización bien planificada del guanaco como recurso renovable, para justificar económicamente su conservación frente a la competencia de la producción bovina/ovina tradicional.</p>
+<p>El modelo poblacional está estructurado en 4 clases de edades: Chulengos, Juveniles, Adultos Jóvenes y Adultos Mayores y se lo ha parametrizado con datos de tasas vitales de esta especie obtenidos de la bibliografía científica. Se lo ha validado con datos poblacionales de establecimientos patagónicos y se han realizado los correspondientes análisis de sensibilidad y elasticidad para determinar cuales parámetros son los más importantes a cuidar para una explotación sustentable del recurso.</p>
+<p>El cálculo de la tasa de crecimiento poblacional, a partir de las tasas de fecundidad y de supervivencia en este caso de estudio, da como resultado una población en crecimiento. Esto permite la inclusión en el modelo de la opción de cosecha de algunos individuos atendiendo a la conservación. Este se utiliza también para analizar los efectos en la población de la extracción de Chulengos.</p>
+</p>
+    
+
+    
+    
+    <div class="row">
+      <div class="col-md-1"></div>
+      <div class="col-md-10">
+        <div class="row">
+          <div class="col-12 col-md-3 pub-row-heading">Type</div>
+          <div class="col-12 col-md-9">
+            <a href="/publication/#1">
+              Conference paper
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-1"></div>
+    </div>
+    <div class="d-md-none space-below"></div>
+    
+
+    
+    <div class="row">
+      <div class="col-md-1"></div>
+      <div class="col-md-10">
+        <div class="row">
+          <div class="col-12 col-md-3 pub-row-heading">Publication</div>
+          <div class="col-12 col-md-9">I Jornadas Nacionales de Ambiente 2012 - Trabajos Completos</div>
+        </div>
+      </div>
+      <div class="col-md-1"></div>
+    </div>
+    <div class="d-md-none space-below"></div>
+    
+
+    <div class="space-below"></div>
+
+    <div class="article-style"></div>
+
+    
+
+
+
+
+
+
+
+
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://twitter.com/intent/tweet?url=https://ignaciosimoy.github.io/publication/jornadasambientes2012/&amp;text=Modelo%20matem%c3%a1tico%20para%20analizar%20la%20din%c3%a1mica%20poblacional%20del%20guanaco%20%28Lama%20Guanicoe%29%20en%20un%20establecimiento%20agropecuario%20en%20la%20provincia%20de%20Neuqu%c3%a9n" target="_blank" rel="noopener" class="share-btn-twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.facebook.com/sharer.php?u=https://ignaciosimoy.github.io/publication/jornadasambientes2012/&amp;t=Modelo%20matem%c3%a1tico%20para%20analizar%20la%20din%c3%a1mica%20poblacional%20del%20guanaco%20%28Lama%20Guanicoe%29%20en%20un%20establecimiento%20agropecuario%20en%20la%20provincia%20de%20Neuqu%c3%a9n" target="_blank" rel="noopener" class="share-btn-facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="mailto:?subject=Modelo%20matem%c3%a1tico%20para%20analizar%20la%20din%c3%a1mica%20poblacional%20del%20guanaco%20%28Lama%20Guanicoe%29%20en%20un%20establecimiento%20agropecuario%20en%20la%20provincia%20de%20Neuqu%c3%a9n&amp;body=https://ignaciosimoy.github.io/publication/jornadasambientes2012/" target="_blank" rel="noopener" class="share-btn-email">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.linkedin.com/shareArticle?url=https://ignaciosimoy.github.io/publication/jornadasambientes2012/&amp;title=Modelo%20matem%c3%a1tico%20para%20analizar%20la%20din%c3%a1mica%20poblacional%20del%20guanaco%20%28Lama%20Guanicoe%29%20en%20un%20establecimiento%20agropecuario%20en%20la%20provincia%20de%20Neuqu%c3%a9n" target="_blank" rel="noopener" class="share-btn-linkedin">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="whatsapp://send?text=Modelo%20matem%c3%a1tico%20para%20analizar%20la%20din%c3%a1mica%20poblacional%20del%20guanaco%20%28Lama%20Guanicoe%29%20en%20un%20establecimiento%20agropecuario%20en%20la%20provincia%20de%20Neuqu%c3%a9n%20https://ignaciosimoy.github.io/publication/jornadasambientes2012/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://service.weibo.com/share/share.php?url=https://ignaciosimoy.github.io/publication/jornadasambientes2012/&amp;title=Modelo%20matem%c3%a1tico%20para%20analizar%20la%20din%c3%a1mica%20poblacional%20del%20guanaco%20%28Lama%20Guanicoe%29%20en%20un%20establecimiento%20agropecuario%20en%20la%20provincia%20de%20Neuqu%c3%a9n" target="_blank" rel="noopener" class="share-btn-weibo">
+          <i class="fab fa-weibo"></i>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+
+
+
+
+  
+    
+
+
+
+  
+  
+  
+    
+  
+  
+  
+  <div class="media author-card content-widget-hr">
+    
+      
+      <a href="https://ignaciosimoy.github.io/"><img class="avatar mr-3 avatar-circle" src="/authors/admin/avatar_hu33d8f2710ea4928d295bd08cdc05f6eb_109072_270x270_fill_q75_lanczos_center.jpg" alt="Mario Ignacio Simoy"></a>
+    
+
+    <div class="media-body">
+      <h5 class="card-title"><a href="https://ignaciosimoy.github.io/">Mario Ignacio Simoy</a></h5>
+      <h6 class="card-subtitle">Postdoctoral Research Fellow</h6>
+      <p class="card-text">My research interests include epidemiology, vector-borne diseases and mathematical models.</p>
+      <ul class="network-icon" aria-hidden="true">
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+    <li>
+      <a href="mailto:ignacio.simoy@gmail.com" >
+        <i class="fas fa-envelope"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://scholar.google.com/citations?user=XFqjNJkAAAAJ&amp;hl=en" target="_blank" rel="noopener">
+        <i class="ai ai-google-scholar"></i>
+      </a>
+    </li>
+  
+</ul>
+
+    </div>
+  </div>
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+  </div>
+</div>
+  </div>
+
+  <div class="page-footer">
+    
+    
+    <div class="container">
+      <footer class="site-footer">
+
+  
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+
+
+
+
+
+  <p class="powered-by">
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      Published with <a href="https://wowchemy.com/?utm_campaign=poweredby" target="_blank" rel="noopener">Wowchemy</a> — the free, <a href="https://github.com/wowchemy/wowchemy-hugo-modules" target="_blank" rel="noopener">open source</a> website builder that empowers creators.
+    
+  </p>
+</footer>
+
+    </div>
+    
+  </div>
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+      
+
+    
+    <script src="/js/vendor-bundle.min.b73dfaac3b6499dc997741748a7c3fe2.js"></script>
+
+    
+    
+    
+      
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      
+
+      
+      
+
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/highlight.min.js" integrity="sha512-TDKKr+IvoqZnPzc3l35hdjpHD0m+b2EC2SrLEgKDRWpxf2rFCxemkgvJ5kfU48ip+Y+m2XVKyOCD85ybtlZDmw==" crossorigin="anonymous"></script>
+        
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/r.min.js" crossorigin="anonymous"></script>
+        
+      
+
+    
+
+    
+    
+    
+
+    
+    
+
+    
+    
+    
+      
+      <script id="search-hit-fuse-template" type="text/x-template">
+        <div class="search-hit" id="summary-{{key}}">
+          <div class="search-hit-content">
+            <div class="search-hit-name">
+              <a href="{{relpermalink}}">{{title}}</a>
+              <div class="article-metadata search-hit-type">{{type}}</div>
+              <p class="search-hit-description">{{snippet}}</p>
+            </div>
+          </div>
+        </div>
+      </script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+      
+    
+
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    <script src="/en/js/wowchemy.min.d68ecd57c0ec1f1f61d65fd568f1c3a0.js"></script>
+
+    
+
+
+
+
+
+
+</body>
+</html>
